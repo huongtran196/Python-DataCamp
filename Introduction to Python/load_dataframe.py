@@ -1,8 +1,9 @@
 #Load a DataFrame
 import pandas as pd
+import matplotlib.pyplot as plt
 r = pd.read_csv('ransom.csv')
 print(r)
-plt.plot(x_values,y_values)
+plt.plot(letters,frequency)
 plt.show()
 
 #Snooping for suspects
