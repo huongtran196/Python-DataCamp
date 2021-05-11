@@ -1,3 +1,5 @@
+# Creating line plot
+
 import matplotlib.pyplot as plt
 
 plt.plot(deshaun.day_of_week, deshaun.hours_worked, label='Deshaun')
@@ -8,6 +10,18 @@ plt.title('Officer Work Hours')
 plt.xlabel('Day of Week')
 plt.ylabel('Hours Worked')
 plt.text(2.5, 80, 'Missing June data')
+
+plt.legend()
+plt.show()
+
+# Tracking crime statistics
+
+print(plt.style.available)
+plt.style.use('fivethirtyeight')
+
+plt.plot(data.['Year'], data.['Phoenix Police Dept'], label='Phoenix', color='DarkCyan')
+plt.plot(data.['Year'], data.['Los Angeles Police Dept'], label='Los Angeles', linestyle=':')
+plt.plot(data.['Year'], data.['Philadelphia Police Dept'], label='Philadelphia', marker='s')
 
 plt.legend()
 plt.show()
