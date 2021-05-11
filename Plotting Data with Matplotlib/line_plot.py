@@ -25,3 +25,16 @@ plt.plot(data.['Year'], data.['Philadelphia Police Dept'], label='Philadelphia',
 
 plt.legend()
 plt.show()
+
+# Identifying kidnapper
+
+plt.plot(ransom.letter, ransom.frequency, label='Ransom', linestyle=':', color='gray')
+plt.plot(suspect1.letter, suspect1.frequency, label='Fred Frequentist')
+plt.plot(suspect2.letter, suspect2.frequency, label='Gertrude Cox')
+
+plt.xlabel('Letter')
+plt.ylabel('Frequency')
+
+plt.legend()
+plt.show()
+
