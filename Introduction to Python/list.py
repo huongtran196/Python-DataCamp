@@ -35,4 +35,14 @@ print(areas[9])
 # Print out the area of living room
 print(areas[4:6])
 
+# Subset & Calculate
+eat_sleep_area = areas[3] + areas[7]
+print(eat_sleep_area)
+downstairs = areas[:6]
+upstairs = areas[6:]
+print(downstairs)
+print(upstairs)
 
+# Subsetting lists of lists
+house[-1][1]
+house[2][0]
