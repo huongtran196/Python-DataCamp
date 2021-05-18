@@ -18,3 +18,19 @@ second = [10.75, 9.50]
 full = first + second
 full_sorted = sorted(full, reverse= True) # Sort full list in descending order
 print(full_sorted)
+
+# String Method: upper() & count()
+place = 'poolhouse'
+place_up = place.upper()
+
+print(place_up)
+print(place)
+print(place.count('o'))
+
+# List Method: index() & count()
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+print(areas.index(20.0)) # Print out the position of the element 20.0
+print(areas.count(9.50)) # Print out how often 9.50 appear in the list
+
+
