@@ -58,4 +58,14 @@ areas[-1] = 10.50 # Update the size of the bathroom
 areas[4] = 'chill zone' # Change the name of living room into chill zone
 print(areas)
 
+areas_1 = areas + ['poolhouse', 24.5]
+areas_2 = areas_1 + ['garage', 15.45]
+print(areas_1)
+print(areas_2)
 
+del(areas[-4:-2]) # Delete bedroom information
+
+areas_copy = list(areas) # Create an explicit copy of the original list
+areas_copy = areas[:]
+areas_copy[0] = 0.5
+print(areas_copy)
