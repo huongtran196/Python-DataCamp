@@ -46,3 +46,16 @@ print(upstairs)
 # Subsetting lists of lists
 house[-1][1]
 house[2][0]
+
+# Manipulating lists
+areas = ['hallway', 11.25, 
+        'kitchen', 18.0, 
+        'living room', 20.0, 
+        'bedroom', 10.75, 
+        'bathroom', 9.50]
+
+areas[-1] = 10.50 # Update the size of the bathroom
+areas[4] = 'chill zone' # Change the name of living room into chill zone
+print(areas)
+
+
