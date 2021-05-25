@@ -38,3 +38,18 @@ plt.ylabel('Frequency')
 plt.legend()
 plt.show()
 
+# Print the list from year and pop
+print(year)
+print(pop)
+
+# Import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+plt.plot(year,pop)
+plt.show()
+
+# Practice with 2 lists: gdp_cap and life_exp
+print(gdp_cap)
+print(life_exp)
+import matplotlib.pyplot as plt
+plt.plot(gdp_cap, life_exp)
+plt.show()
