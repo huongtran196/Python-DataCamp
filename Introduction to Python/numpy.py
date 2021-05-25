@@ -88,6 +88,33 @@ print(np_baseball + updated)
 
 # Create numpy array: conversion
 conversion = np.array([0.0254, 0.453592, 1])
-
-# Print out product of np_baseball and conversion
 print(np_baseball * conversion)
+
+# Numpy Statistics
+np_height_in = np_baseball[:, 0]
+print(np.mean(np_height_in))
+print(np.median(np_height_in))
+
+avg = np.mean(np_baseball[:,0])
+print("Average: " + str(avg))
+
+med = np.median(np_baseball[:, 0])
+print("Median: " + str(med))
+
+stddev = np.std(np_baseball[:, 0])
+print("Standard Deviation: " + str(stddev))
+
+corr = np.corrcoef(np_baseball[:, 0], np_baseball[:, 1])
+print("Correlation: " + str(corr))
+
+np_positions = np.array(positions)
+np_heights = np.array(heights)
+
+# Heights of the goalkeepers: gk_heights
+gk_heights = np_heights[np_positions == 'GK']
+
+# Heights of the other players: other_heights
+other_heights = np_heights[np_positions != 'GK']
+
+print("Median height of goalkeepers: " + str(np.median(gk_heights)))
+print("Median height of other players: " + str(np.median(other_heights)))
