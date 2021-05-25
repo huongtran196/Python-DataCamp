@@ -62,3 +62,15 @@ print(np_weight_lb[50])
 
 # Print out sub-array of np_height_in: index 100 up to and including index 110
 print(np_height_in[100:111])
+
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
+
+import numpy as np
+np_baseball = np.array(baseball)
+print(type(np_baseball))
+print(np_baseball.shape)
+
