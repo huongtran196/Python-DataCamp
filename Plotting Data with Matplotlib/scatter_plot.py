@@ -6,3 +6,11 @@ plt.ylabel('Longitude')
 plt.ylabel('Latitude')
 
 plt.show()
+
+plt.scatter(gpd_cap, life_exp)
+plt.xscale('log')
+
+plt.show()
+
+plt.scatter(pop, life_exp)
+plt.show()
