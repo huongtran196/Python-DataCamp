@@ -77,3 +77,13 @@ for lab, row in cars.iterrows() :
 for lab, row in cars.iterrows() :
     print(str(lab) + ': ' + str(row['cars_per_cap']))
 
+# Code for loop that adds COUNTRY column
+for lab, row in cars.iterrows() :
+    cars.loc[lab, 'COUNTRY'] = row['country'].upper()
+
+# Print cars
+print(cars)
+
+# Use .apply(str.upper)
+cars['COUNTRY'] = cars['country'].apply(str.upper)
+print(cars)
