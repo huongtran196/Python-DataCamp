@@ -52,3 +52,14 @@ europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
 # Iterate over europe
 for key, value in europe.items() : 
     print('the capital of ' + str(key) + ' is ' + str(value))
+
+# Import numpy as np
+import numpy as np
+
+# For loop over np_height
+for x in np.nditer(np_height) : 
+    print(str(x) + ' inches')
+
+# For loop over np_baseball
+for y in np.nditer(np_baseball) : 
+    print(y)
