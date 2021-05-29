@@ -63,3 +63,17 @@ for x in np.nditer(np_height) :
 # For loop over np_baseball
 for y in np.nditer(np_baseball) : 
     print(y)
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Iterate over rows of cars
+for lab, row in cars.iterrows() :
+    print(lab)
+    print(row)
+
+# Adapt for loop
+for lab, row in cars.iterrows() :
+    print(str(lab) + ': ' + str(row['cars_per_cap']))
+
