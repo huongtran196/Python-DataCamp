@@ -64,3 +64,23 @@ yell1, yell2 = shout_all('congratulations', 'you')
 
 print(yell1)
 print(yell2)
+
+# Iterate over lang column in DataFrame and print out dictionary of langs_count
+import pandas as pd
+
+df = pd.read_csv('tweets.csv')
+
+langs_count = {}
+
+col = df['lang']
+
+for entry in col:
+
+    # If the language is in langs_count, add 1 
+    if entry in langs_count.keys():
+        langs_count[entry] = langs_count[entry] + 1
+    # Else add the language to langs_count, set the value to 1
+    else:
+        langs_count[entry] = 1
+
+print(langs_count)
