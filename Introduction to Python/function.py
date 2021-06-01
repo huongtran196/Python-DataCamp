@@ -50,3 +50,17 @@ print(nums)
 # Construct even_nums
 even_nums = (2, 4, 6)
 print(even_nums)
+
+# Functions that return multiple values
+def shout_all(word1, word2):
+    
+    shout1 = word1 + '!!!'
+    shout2 = word2 + '!!!'
+    shout_words = (shout1, shout2)
+
+    return shout_words
+
+yell1, yell2 = shout_all('congratulations', 'you')
+
+print(yell1)
+print(yell2)
