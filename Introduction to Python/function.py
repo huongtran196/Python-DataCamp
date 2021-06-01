@@ -17,3 +17,14 @@ def shout(word):
 
 # Call shout with the string 'congratulations'
 shout('congratulations')
+
+# Functions that return a single value
+def shout(word):
+    """Return a string with three exclamation marks"""
+    # Concatenate the strings: shout_word
+    shout_word = word + '!!!'
+    return(shout_word)
+
+yell = shout('congratulations')
+
+print(yell)
