@@ -34,3 +34,12 @@ print(state_fam.head())
 ind_state = homelessness[['individuals', 'state']]
 print(ind_state.head())
 
+# Subsetting rows
+ind_gt_10k = homelessness[homelessness['individuals'] > 10000]
+print(ind_gt_10k.head())
+
+mountain_reg = homelessness[homelessness['region'] == 'Mountain']
+print(mountain_reg.head())
+
+fam_lt_1k_pac = homelessness[(homelessness['family_members'] < 1000) & (homelessness['region'] == 'Pacific')]
+print(fam_lt_1k_pac.head())
