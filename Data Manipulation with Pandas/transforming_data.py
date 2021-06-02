@@ -58,3 +58,8 @@ homelessness['total'] = homelessness['individuals'] + homelessness['family_membe
 homelessness['p_individuals'] = homelessness['individuals'] / homelessness['total']
 print(homelessness)
 
+# Question: 'Which state has the highest number of homeless individuals per 10,000 people in the state?'
+homelessness['ind_per_10k'] = homelessness[homelessness['individuals'] * 10000 / homelessness['state_pop']]
+ind_per_10k_sorted = homelessness.sort_values('ind_per_10k', ascending = False)
+result = ind_per_10k_sorted[['state', 'ind_per_10k']]
+print(result)
