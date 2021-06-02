@@ -43,3 +43,13 @@ print(mountain_reg.head())
 
 fam_lt_1k_pac = homelessness[(homelessness['family_members'] < 1000) & (homelessness['region'] == 'Pacific')]
 print(fam_lt_1k_pac.head())
+
+# Subsetting rows by categorical variables
+south_mid_atlantic = homelessness[homelessness['region'].isin(['South Atlantic', 'Mid-Atlantic'])]
+print(south_mid_atlantic)
+
+# The Mojave Desert states
+canu = ["California", "Arizona", "Nevada", "Utah"]
+mojave_homelessness = homelessness[homelessness['region'].isin(canu)]
+print(mojave_homelessness)
+
