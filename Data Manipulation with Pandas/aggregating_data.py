@@ -14,3 +14,11 @@ print(sales['weekly_sales'].median())
 print(sales['date'].min())
 print(sales['date'].max())
 
+# Using .agg() method
+def iqr(column):
+    return column.quantile(0.75) - column.quantile(0.25)
+
+print(sales['temperature_c'].agg(iqr))
+print(sales[['temperature_c', 'fuel_price_usd_per_l', 'unemployment']].agg(iqr))
+print(sales[['temperature_c', 'fuel_price_usd_per_l', 'unemployment']].agg([iqr, np.median]))
+
