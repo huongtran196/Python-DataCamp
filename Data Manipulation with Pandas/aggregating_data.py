@@ -112,3 +112,7 @@ mean_sales_by_type_holiday = sales.pivot_table(values = 'weekly_sales', index = 
 
 # Print mean_sales_by_type_holiday
 print(mean_sales_by_type_holiday)
+
+#Fill in missing values and sum values with pivot tables
+print(sales.pivot_table(values = 'weekly_sales', index = 'department', columns = 'type', fill_value = 0))
+print(sales.pivot_table(values="weekly_sales", index="department", columns="type", fill_value = 0, margins = True))
