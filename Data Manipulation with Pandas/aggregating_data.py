@@ -22,3 +22,12 @@ print(sales['temperature_c'].agg(iqr))
 print(sales[['temperature_c', 'fuel_price_usd_per_l', 'unemployment']].agg(iqr))
 print(sales[['temperature_c', 'fuel_price_usd_per_l', 'unemployment']].agg([iqr, np.median]))
 
+# Cumulative statistics
+sales_1_1 = pd.read_csv('sales_1_1')
+sales_1_1 = sales_1_1.sort_values('date', ascending=True)
+sales_1_1['cum_weekly_sales'] = sales_1_1['weekly_sales'].cumsum()
+sales_1_1['cum_max_sales'] = sales_1_1['weekly_sales'].cummax()
+print(sales_1_1[['date', 'weekly_sales', 'cum_weekly_sales', 'cum_max_sales']])
+
+
+
