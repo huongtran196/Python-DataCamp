@@ -29,5 +29,13 @@ sales_1_1['cum_weekly_sales'] = sales_1_1['weekly_sales'].cumsum()
 sales_1_1['cum_max_sales'] = sales_1_1['weekly_sales'].cummax()
 print(sales_1_1[['date', 'weekly_sales', 'cum_weekly_sales', 'cum_max_sales']])
 
+# Dropping duplicates
+store_types = sales.drop_duplicates(subset=['store', 'type'])
+print(store_types.head())
 
+store_depts = sales.drop_duplicates(subset=['store', 'department'])
+print(store_depts.head())
+
+holiday_dates = sales[sales['is_holiday'] == True].drop_duplicates(subset='date')
+print(holiday_dates['date'])
 
