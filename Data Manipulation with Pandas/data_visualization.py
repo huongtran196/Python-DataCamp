@@ -21,3 +21,9 @@ nb_sold_by_date.plot(x = 'date', y = 'nb_sold_by_date', kind = 'line')
 
 # Show the plot
 plt.show()
+
+# Scatter plot of nb_sold vs avg_price with title
+avocados.plot(x = 'nb_sold', y = 'avg_price', kind = 'scatter', title = 'Number of avocados sold vs. average price')
+
+# Show the plot
+plt.show()
