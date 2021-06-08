@@ -15,3 +15,9 @@ avocados_2016.isna().sum().plot(kind='bar')
 
 # Show plot
 plt.show()
+
+# Removing missing values
+avocados_complete = avocados_2016.dropna()
+
+# Check if any columns contain missing values
+print(avocados_complete.isna().any())
