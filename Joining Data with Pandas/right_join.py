@@ -11,3 +11,15 @@ movies_scifi_only = movies.merge(scifi_only, left_on='id', right_on='movie_id')
 
 print(movies_scifi_only.head())
 print(movies_scifi_only.shape)
+
+
+pop_movies = pd.read_csv('pop_movies.csv')
+movies_to_genres = pd.read_csv('movies_to_genres')
+
+genres_movies = movie_to_genres.merge(pop_movies, how='right', 
+                                      left_on='movie_id', 
+                                      right_on='id')
+genre_count = genres_movies.groupby('genre', as_index=False).agg({'id':'count'})
+
+genre_count.plot(kind='bar')
+plt.show()
